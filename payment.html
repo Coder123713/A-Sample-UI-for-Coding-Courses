@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment | CodeBright</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">CodeBright</div>
+  </header>
+
+  <section class="payment-container fade-in">
+    <h1>Complete Your Enrollment</h1>
+    <p>This is a simulated payment gateway. No real charges will be made.</p>
+    <form id="payment-form">
+      <label>
+        Cardholder Name
+        <input type="text" name="cardname" placeholder="Full Name" required>
+      </label>
+      <label>
+        Card Number
+        <input type="tel" name="cardnumber" placeholder="1234 5678 9012 3456" required>
+      </label>
+      <div class="two-col">
+        <label>
+          Expiry Date
+          <input type="text" name="expdate" placeholder="MM/YY" required>
+        </label>
+        <label>
+          CVV
+          <input type="password" name="cvv" placeholder="123" required>
+        </label>
+      </div>
+      <button type="submit" class="btn-pay">Pay Now</button>
+    </form>
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CodeBright</p>
+  </footer>
+</body>
+</html>

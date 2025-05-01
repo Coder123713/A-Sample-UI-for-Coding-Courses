@@ -1,0 +1,237 @@
+/* ——————————————————— Reset & Base ——————————————————— */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* prevent fixed navbar from covering content */
+  body {
+    padding-top: 68px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; }
+  
+  /* ——————————————————— Variables ——————————————————— */
+  :root {
+    --bg-dk: #121212;
+    --bg-md: #1f1f1f;
+    --accent: #e1a100;
+    --text: #f5f5f5;
+    --fade-duration: 0.8s;
+    --transition: 0.3s ease-in-out;
+  }
+  
+  /* ——————————————————— Navbar ——————————————————— */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg-md);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  nav a {
+    margin-left: 1.5rem;
+    color: var(--text);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color var(--transition);
+  }
+  nav a:hover,
+  nav a.active {
+    color: var(--accent);
+  }
+  
+  /* ——————————————————— Hero ——————————————————— */
+  .hero {
+    height: calc(100vh - 68px);
+    background: linear-gradient(135deg, #1f2022 0%, #282a2d 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn var(--fade-duration) ease forwards;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeIn var(--fade-duration) ease 0.3s forwards;
+  }
+  
+  /* ——————————————————— Enroll Button ——————————————————— */
+  .btn-enroll {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg-dk);
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .btn-enroll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* ——————————————————— Sections ——————————————————— */
+  section {
+    padding: 5rem 2rem 2rem;
+  }
+  .courses,
+  .about {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* ——————————————————— Courses Grid ——————————————————— */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--bg-md);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ——————————————————— Enroll Page ——————————————————— */
+  .enroll-page {
+    text-align: center;
+  }
+  .enroll-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .enroll-copy p {
+    max-width: 700px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+  }
+  
+  /* ——————————————————— Payment Form ——————————————————— */
+  .payment-container {
+    max-width: 420px;
+    margin: 60px auto 0;    /* ← added top margin for extra gap */
+    background: var(--bg-md);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+  .payment-container h1 {
+    margin-bottom: 1rem;
+  }
+  .payment-container p {
+    margin-bottom: 1.5rem;
+    color: #bbb;
+  }
+  .payment-container form {
+    text-align: left;
+  }
+  .payment-container label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  .payment-container input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-top: 0.3rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--bg-dk);
+    color: var(--text);
+    font-size: 1rem;
+    transition: box-shadow var(--transition);
+  }
+  .payment-container input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--accent);
+  }
+  .two-col {
+    display: flex;
+    gap: 1rem;
+  }
+  .btn-pay {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--accent);
+    color: var(--bg-dk);
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .btn-pay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  .back-home {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #ccc;
+    transition: color var(--transition);
+  }
+  .back-home:hover {
+    color: var(--accent);
+  }
+  
+  /* ——————————————————— Footer ——————————————————— */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-md);
+    color: #888;
+    margin-top: 3rem;
+  }
+  
+  /* ——————————————————— Animations ——————————————————— */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn var(--fade-duration) ease forwards;
+  }
+  
